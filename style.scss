@@ -18,14 +18,9 @@ html {
 }
 
 body {
-  background: #fffff8;
-  font: 18px/1.4 $georgia;
+	background: $white;
+  font: 18px/1.4 $helvetica;
   color: $darkGray;
-}
-
-table td,
-table th {
-  padding: 6px 6px;
 }
 
 .container {
@@ -37,7 +32,7 @@ table th {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkGray;
+  color: $darkerGray;
   font-weight: bold;
 
   line-height: 1.7;
@@ -76,14 +71,10 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-  cursor: pointer;
+	cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
-}
-
-a:hover {
-  background: #f0f0ff;
 }
 
 ul, ol {
@@ -117,37 +108,6 @@ strong, b {
 
 img {
   max-width: 100%;
-}
-
-/* Hack for aligning images left/right/centered
- * https://stackoverflow.com/questions/255170/markdown-and-image-alignment
- */
-img[alt$=">"] {
-  float: right;
-}
-
-img[alt$="<"] {
-  float: left;
-}
-
-img[alt$="><"] {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-  float: none!important;
-}
-
-img[alt$="^"] {
-    vertical-align: top;
-}
-
-
-th {
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #bbb;
-  font-weight: bold;
-  color: #3d5cbb;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -243,8 +203,7 @@ th {
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
-  font-family: $helveticaNeue;
-  font-size: 15px;
+  font-size: 16px;
 
   @include mobile {
     margin: 3px 0;
@@ -292,26 +251,16 @@ nav {
   border-bottom: none;
 }
 
-blockquote {
-  // background: #f9f9f9;
-  border-left: 3px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 5px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 3em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
-
 .post {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
   .comments {
     margin-top: 10px;
   }
@@ -334,18 +283,7 @@ footer {
   text-align: center;
 }
 
-// For some reason, the default CSS had broken the appearance of footnotes.
-sup {
-  vertical-align: super;
-  font-size: x-small;
-}
-
-a.papertitle {
-    font-size: 20px
-}
-
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
-@import "glitch";
 @import "svg-icons";
