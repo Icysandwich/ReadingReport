@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
@@ -19,7 +19,7 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-            <a href="{{ site.personal_url }}/" class="site-avatar"><img src="{{ site.avatar }}" alt="Alastair Reid"/></a>
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
@@ -27,9 +27,7 @@
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/papers">Papers</a>
-            <a href="{{ site.baseurl }}/authors">Authors</a>
-            <a href="{{ site.baseurl }}/notes">Notes</a>
+            <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
           </nav>
         </header>
@@ -38,11 +36,6 @@
 
     <div id="main" role="main" class="container">
       {{ content }}
-    </div>
-
-    <br>
-    <div class="date" style="text-align:center;">
-      The opinions expressed are my own views and not my employer’s.
     </div>
 
     <div class="wrapper-footer">

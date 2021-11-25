@@ -31,17 +31,5 @@ layout: default
       <a href="https://arxiv.org/abs/{{page.eprint}}">{{ page.archiveprefix }}:{{ page.eprint }} [{{ page.primaryclass }}]</a><br>
   {% endif %}
   {% if page.location %} {{ page.location }}<br> {% endif %}
-  {{ page.month }} {{ page.year }}
-
-  <h2>Abstract</h2>
-  {{ page.abstract | markdownify }}
-
-  {% if page.png %}
-  <a href="{{ site.baseurl }}/papers/{{ page.file }}">
-  <img src="{{ site.baseurl }}/papers/{{ page.png }}" alt="First page of paper" height=400px>
-  </a>
-  {% endif %}
-
-  <h2>BibTeX</h2>
-  <span style="display: block; font-family: monospace; white-space: pre; font-size:50%">{{ page.bibtex }}</span>
+  
 </article>
