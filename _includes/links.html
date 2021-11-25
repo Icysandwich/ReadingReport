@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------
+
+{% assign label = page.id | replace_first: "/", "" %}
+
+{% assign refs = site.data.backrefs["notes"][label] %}
+{% if refs.size > 0 %}
+## Notes related to {{page.title}}
+{% for p in refs %} <a href="{{ site.baseurl }}/{{ p[0] }}">{{ p[1][0] }}</a>{% if forloop.last %}{% else %},{% endif %} {% endfor %}
+{% endif %}
+
+{% assign refs = site.data.backrefs["papers"][label] %}
+{% if refs.size > 0 %}
+## Papers related to {{page.title}}
+<ul>
+{% for p in refs %}
+    <li>{{p[1][0]}} [<a href="{{ site.baseurl }}/{{ p[0] }}">{{ p[1][1] }}</a>]</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% for x in page.isa %}
+[{{x}}]: {{site.baseurl}}/notes/{{x | replace: ' ', '-' | downcase}}
+{% endfor %}
+{% for x in page.examples %}
+[{{x}}]: {{site.baseurl}}/notes/{{x | replace: ' ', '-' | downcase}}
+{% endfor %}
+{% for x in page.notes %}
+[{{x}}]: {{site.baseurl}}/notes/{{x | replace: ' ', '-' | downcase}}
+{% endfor %}
+{% for x in page.papers %}
+[{{x}}]: {{site.baseurl}}/papers/{{x}}
+{% endfor %}

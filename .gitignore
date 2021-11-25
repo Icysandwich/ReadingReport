@@ -1,0 +1,14 @@
+.*un~
+.*.swp
+.*.swo
+.sass-cache
+.jekyll-metadata
+RW.aux
+RW.bbl
+RW.blg
+RW.log
+RW.out
+RW.pdf
+Gemfile.lock
+Gemfile
+_site
