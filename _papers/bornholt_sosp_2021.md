@@ -57,6 +57,7 @@ correctness properties.
     check crash consistency like other works usually do.
   - For concurrent crash-free executions, they use a Rust model checker
     to verify the properties.
+  
   Last, they claim that the scenario of concurrent crashing executions is too
   hard to check. It is reasonable.
 
