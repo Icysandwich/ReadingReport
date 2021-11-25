@@ -54,13 +54,13 @@ baseurl: /ReadingReport
 # Generate one page per paper with all the information about the paper on it
 #
 
-collections:
-    papers:
-        output: true
-    topics:
-        output: true
-    notes:
-        output: true
+# collections:
+#     papers:
+#         output: true
+#     topics:
+#         output: true
+#     notes:
+#         output: true
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -86,7 +86,7 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-plugins:
+gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
