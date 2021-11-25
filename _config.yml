@@ -54,9 +54,9 @@ baseurl: /ReadingReport
 # Generate one page per paper with all the information about the paper on it
 #
 
-# collections:
-#     papers:
-#         output: true
+collections:
+    papers:
+        output: true
 #     topics:
 #         output: true
 #     notes:

@@ -3,11 +3,11 @@ layout: default
 ---
 
 <div class="posts">
-  {% for paper in papers %}
-    <article class="post">
-
-      <a href="{{ site.baseurl }}{{ paper.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+  <ul>
+      {% assign papers = site.papers | sort: "readings" | reverse %}
+      {% for paper in papers %}
+          <li>{{ paper.title }} [<a href="{{ site.baseurl }}{{ paper.url }}">{{ paper.slug }}</a>]</li>
+      {% endfor %}
+  </ul>
 </div>
 
