@@ -39,7 +39,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://icysandwich.github.io/
+url: https://icysandwich.github.io
 
 # Personal website URL
 personal_url: https://icysandwich.github.io
